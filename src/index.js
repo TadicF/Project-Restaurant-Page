@@ -1,2 +1,4 @@
-import loadPage from './pageload.js';
+import './styles.css'; 
+import { loadPage } from './pageload.js';
+
 loadPage();

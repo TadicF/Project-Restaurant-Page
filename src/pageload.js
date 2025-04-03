@@ -1,4 +1,4 @@
-export default function loadPage() {
+export function loadPage() {
   const content = document.querySelector('#content');
   const titleOne = document.createElement('h1');
   const titleTwo = document.createElement('h2');
