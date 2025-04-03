@@ -1,1 +1,2 @@
-console.log("setup");
+import loadPage from './pageload.js';
+loadPage();
