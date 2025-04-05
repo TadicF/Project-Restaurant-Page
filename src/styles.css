@@ -1,8 +1,91 @@
+/* Default Styling */
+
 body {
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-rows: 0.6fr 6fr;
+  height: 100vh;
 }
 
+p, h1, h2 {
+  margin: 0;
+}
+
+/* Header Styling */
+
+header {
+  background-color: #1c130f;
+  border-bottom: 3px solid #b59164;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 50px;
+}
+
+button {
+  font-family: "WinkyMedium";
+  font-size: 1.5rem;
+  padding: 8px 30px;
+  background-color: #442e24;
+  color: white;
+  border: 2px solid #b59164;
+}
+
+/* Main Styling */ 
+
 #content {
-  background-color: green;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(24, 34, 34, 0.5) ), url(images/restaurant.jpg);
+  background-size:auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1.5fr;
+}
+
+.restaurantName, .restaurantTitle, .restaurantText {
+  color: white;
+}
+
+.restaurantName {
+  font-family: 'WinkyBold';
+  font-size: 6rem;
+  align-self: end;
+  justify-self: center;
+}
+
+.restaurantTitle {
+  font-family: 'WinkyMedium';
+  font-size: 2rem;
+  align-self: self-start;
+  justify-self: center;
+}
+
+.restaurantText {
+  font-family: 'WinkyRegular';
+  font-size: 1.3rem;
+  align-self: flex-start;
+  justify-self: center;
+}
+
+/* Fonts */
+
+@font-face {
+  font-family: 'WinkyMedium';
+  src: url(fonts/WinkySans-Medium.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WinkyRegular";
+  src: url(fonts/WinkySans-Regular.ttf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WinkyBold";
+  src: url(fonts/WinkySans-Bold.ttf);
+  font-style: normal;
 }
