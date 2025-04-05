@@ -27,13 +27,22 @@ nav {
   gap: 50px;
 }
 
-button {
+nav > button {
   font-family: "WinkyMedium";
   font-size: 1.5rem;
   padding: 8px 30px;
   background-color: #442e24;
   color: white;
   border: 2px solid #b59164;
+  transition: 0.15s all;
+  cursor: pointer;
+}
+
+nav > button:hover {
+  background-color: #b59164;
+  border: 2px solid #442e24;
+  color: black;
+  scale: 1.2;
 }
 
 /* Main Styling */ 
@@ -51,9 +60,11 @@ button {
 
 .restaurantName {
   font-family: 'WinkyBold';
-  font-size: 6rem;
+  font-size: 7rem;
+  color: #e0caaf;
   align-self: end;
   justify-self: center;
+  transition: 0.15s all;
 }
 
 .restaurantTitle {
