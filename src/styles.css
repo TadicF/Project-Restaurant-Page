@@ -20,6 +20,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 80px;
 }
 
 nav {
@@ -48,10 +49,17 @@ nav > button:hover {
 /* Main Styling */ 
 
 #content {
+
+}
+
+.homePage {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(24, 34, 34, 0.5) ), url(images/restaurant.jpg);
   background-size:auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   display: grid;
   grid-template-rows: 1fr 1fr 1.5fr;
+  height: 100%;
 }
 
 .restaurantName, .restaurantTitle, .restaurantText {
@@ -64,7 +72,6 @@ nav > button:hover {
   color: #e0caaf;
   align-self: end;
   justify-self: center;
-  transition: 0.15s all;
 }
 
 .restaurantTitle {
@@ -80,6 +87,85 @@ nav > button:hover {
   align-self: flex-start;
   justify-self: center;
 }
+
+/* Menu Styling */ 
+
+.menuPage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(24, 34, 34, 0.5) ), url(images/restaurant.jpg);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr repeat(5, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.restaurantMenu {
+  font-family: 'WinkyBold';
+  font-size: 2rem;
+  color: #e0caaf;
+  justify-self: center;
+  margin-top: 60px;
+}
+
+.menuPage p {
+  color: white;
+}
+
+.breakfestMenu, .lunchMenu, .dinnerMenu, .dessertsMenu, .drinksMenu {
+  border: 2px solid #b59164;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: rgba(121, 101, 13, 0.226);
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.15s;
+  box-shadow: 1px 1px 5px #b59164;
+}
+
+.breakfestMenu:hover, .lunchMenu:hover, .dinnerMenu:hover, .dessertsMenu:hover,
+.drinksMenu:hover {
+  scale: 1.2;
+  box-shadow: 1px 1px 30px #b59164;
+}
+
+.breakfestMenu > p, .lunchMenu > p, .dinnerMenu > p, .dessertsMenu > p
+, .drinksMenu > p {
+  font-family: "WinkyMedium";
+  font-size: 28px;
+  align-self: center;
+  justify-self: center;
+  border-bottom: 2px solid #e0caaf;
+}
+
+.breakfestMenu > div > p, .lunchMenu > div > p, .dinnerMenu > div > p 
+, .dessertsMenu > div > p, .drinksMenu > div > p {
+  font-family: "WinkyRegular";
+  align-self: center;
+  justify-self: center;
+}
+
+.breakfestMenu > div > p:first-child, .lunchMenu > div > p:first-child,
+ .dinnerMenu > div > p:first-child , .dessertsMenu > div > p:first-child,
+ .drinksMenu > div > p:first-child {
+  color: #fad19e;
+}
+
+.breakfestMenu > div > p:first-child + p, .lunchMenu > div > p:first-child + p,
+ .dinnerMenu > div > p:first-child + p
+ , .dessertsMenu > div > p:first-child + p, .drinksMenu > div > p:first-child + p{
+  border-bottom: 1px solid #e0caaf;
+  padding-bottom: 3px;
+}
+
 
 /* Fonts */
 
