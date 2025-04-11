@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-rows: 0.6fr 6fr;
+  grid-template-rows: 0.7fr 8fr;
   height: 100vh;
 }
 
@@ -20,7 +20,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80px;
+  min-height: 100px;
+  max-height: 100px;
 }
 
 nav {
@@ -49,7 +50,7 @@ nav > button:hover {
 /* Main Styling */ 
 
 #content {
-
+  height: 100%;
 }
 
 .homePage {
@@ -67,7 +68,7 @@ nav > button:hover {
 }
 
 .restaurantName {
-  font-family: 'WinkyBold';
+  font-family: 'KenyanCoffeBold';
   font-size: 7rem;
   color: #e0caaf;
   align-self: end;
@@ -105,8 +106,8 @@ nav > button:hover {
 }
 
 .restaurantMenu {
-  font-family: 'WinkyBold';
-  font-size: 2rem;
+  font-family: 'KenyanCoffeBold';
+  font-size: 35px;
   color: #e0caaf;
   justify-self: center;
   margin-top: 60px;
@@ -166,6 +167,89 @@ nav > button:hover {
   padding-bottom: 3px;
 }
 
+/* Contact Page Styling */
+.contactPage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(24, 34, 34, 0.5) ), url(images/restaurant.jpg);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 2fr 5fr;
+}
+
+.contactUs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contactUs > h1 {
+  font-family: 'KenyanCoffeBold';
+  font-size: 75px;
+  color: #e0caaf;
+}
+
+.contactTabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 30px 50px;
+  padding-bottom: 150px;
+  gap: 50px;
+}
+
+.location, .opening-hours, .contact {
+  border: 3px solid #b59164;
+  background-color: rgb(155, 125, 71, 0.5);
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  gap: 50px;
+  box-shadow: 1px 1px 10px #b88f5e;
+}
+
+.locationTitle, .openingTitle, .contactTitle {
+  background-color: rgba(37, 32, 23, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 0 3px 10px -2px rgb(0, 0, 0);
+}
+
+.locationTitle > p, .openingTitle > p, .contactTitle > p {
+  font-family: "WinkyMedium";
+  font-size: 45px;
+  color: white;
+}
+
+.locationInfo, .openingInfo, .contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  padding: 50px 0;
+}
+
+.locationInfo > p, .openingInfo > p, .contactInfo > p {
+  font-family: "WinkyRegular";
+  color: white;
+  font-size: 24px;
+}
+
+.locationInfo > p:last-child {
+  font-size: 16px;
+  color: rgb(255, 245, 213);
+}
+
+.locationInfo > p:nth-child(2n + 1), .openingInfo > p:nth-child(2n + 1)
+, .contactInfo > p:nth-child(2n + 1) {
+  background-color: rgba(240, 211, 115, 0.2);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
 /* Fonts */
 
@@ -185,4 +269,30 @@ nav > button:hover {
   font-family: "WinkyBold";
   src: url(fonts/WinkySans-Bold.ttf);
   font-style: normal;
+}
+
+@font-face {
+  font-family: "KenyanCoffeRegular";
+  src: url(fonts/Kenyan\ Coffee\ Rg.otf);
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "KenyanCoffeBold";
+  src: url(fonts/Kenyan\ Coffee\ Bd.otf);
+  font-style: normal;
+}
+
+/* Hide Scrollbar */
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
 }

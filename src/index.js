@@ -2,10 +2,12 @@ import './styles.css';
 import { homePage } from './homePage.js';
 import { menuPage } from './menuPage.js';
 
+
+
 const pageLoader = {
   home: document.querySelector('#homeButton'),
   menu: document.querySelector('#menuButton'),
-  about: document.querySelector('#aboutButton'),
+  contact: document.querySelector('#contactButton'),
   
   loadHome: function() {
     const content = document.querySelector('#content');
