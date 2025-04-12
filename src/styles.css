@@ -251,6 +251,18 @@ nav > button:hover {
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: rgb(201, 201, 201);
+}
+
+a:visited {
+  color: rgb(201, 201, 201);
+}
+
 /* Fonts */
 
 @font-face {
